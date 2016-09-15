@@ -11,7 +11,10 @@
 
 <script>
 var object = {
-    firstName: "Bary", lastName: "Goldman", age: 34, eyeColor: "green"
+    firstName: "Bary",
+    lastName: "Goldman",
+    age: 34,
+    eyeColor: "green"
 };
 var lenght = 16;
 var lastName = "Johnson";
@@ -24,19 +27,23 @@ var jon = "He is 'Jon'";
 
 
 
-console.log(typeof object);
+//console.log(typeof object);
 
-//function iterate() {
-//    for (i = 0; i < object.length; i++) {
-//        return (object[i]);
-////        i++;
-//    }
-//}
-//
-//
-//
-//
-//document.getElementById("demo").innerHTML = iterate();
+function iterate() {
+    for (var i in object) {
+        if (object.hasOwnProperty(i)) {
+            return object[i];
+
+        }
+    }
+//        i++;
+    }
+
+
+
+
+
+document.getElementById("demo").innerHTML = iterate();
 
 //console.log(lenght, lastName, cars, x);
 
