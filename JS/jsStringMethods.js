@@ -73,3 +73,39 @@ function myStingToUpperCase() {
     var text = document.getElementById("demo4").innerHTML;
     document.getElementById("demo4").innerHTML = text.toUpperCase();
 }
+
+function myStringToLowerCase () {
+    var text = document.getElementById("demo4").innerHTML;
+    document.getElementById("demo4").innerHTML = text.toLowerCase();
+}
+
+
+function myConcat() {
+    var text1 = "HI";
+    var text2 = "THERE";
+    document.getElementById("demo4").innerHTML = text1.concat(" ", text2);
+}
+
+function myCharAtMethod() {
+    var str = document.getElementById("demo4").innerHTML;
+    document.getElementById("demo4").innerHTML = str.charAt(0); 
+}
+
+
+function mySplit() {
+    var str = document.getElementById("demo4").innerHTML;
+    var arr = str.split(" ");
+    document.getElementById("demo4").innerHTML = arr[0];
+    console.log(arr);
+}
+
+function mySplit2() {
+    var str = document.getElementById("demo4").innerHTML;
+    var arr = str.split("");
+    var text = "";
+    var i;
+    for (i = 0; i < arr.length; i++) {
+        text += arr[i] + "<br>"
+    }
+    document.getElementById("demo4").innerHTML = text;
+}
