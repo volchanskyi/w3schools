@@ -109,3 +109,4 @@ function mySplit2() {
     }
     document.getElementById("demo4").innerHTML = text;
 }
+
