@@ -140,8 +140,13 @@
 <p id="json">demo10</p><button onclick="tryJson()">use the JavaScript built-in function JSON.parse() <p></p>
     to convert the string into a JavaScript object:</button>
 
-
-
+<form name="myForm" action="demo_form.asp"
+      onsubmit="return myFormValidation()" method="post">Name: <input type="text" name="fname" required>
+<input type="submit" value="Submit"/>
+</form>
+<p id = "demo13">Please input a number between 1 and 10:</p>
+<input  id="numb" type="text" />
+<button type="button" onclick="myFormValidNumbers()">Submit</button>
 
 <script src = "JS/jsSwitch.js"></script>
 <script src = "JS/jsArraySort.js"></script>
@@ -163,6 +168,7 @@
 <script src = "JS/jsRegExp.js"></script>
 <script src = "JS/jsErr.js"></script>
 <script src = "JS/jsJson.js"></script>
+<script src = "JS/jsForms.js"></script>
 
 </body>
 </html>
