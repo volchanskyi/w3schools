@@ -28,4 +28,23 @@ function myMutObj() {
 }
 
 
+function myForLoopObj() {
+    var txt = "";
+    var person = {fname: "Ivan", lname: "Volchanskyi", age: 30};
+    var x;
+    for(x in person) {
+        txt += person[x] + " ";
+    }
+    document.getElementById("demo15").innerHTML = txt;
+    
+    
+}
+
+function myDelPersObj() {
+    var person = {fname: "Ivan", lname: "Volchanskyi", age: 30};
+    delete person.age;
+    document.getElementById("demo15").innerHTML = person.fname + " is " + person.age + " years old";
+}
+
+
 
