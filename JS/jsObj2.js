@@ -3,15 +3,15 @@
  */
 
 //constructor
-function person(first, last, age, eye) {
+function Person(first, last, age, eye) {
     this.firstName = first;
     this.lastName = last;
     this.age = age;
     this.eyeColor = eye;
 }
 function myRootsCreate() {
-    var myFather = new person("Sergey", "Volchanskyi", 53, "grey");
-    var myGrandFather = new person("Ivan", "Volchanskyi", 78, "blue");
+    var myFather = new Person("Sergey", "Volchanskyi", 53, "grey");
+    var myGrandFather = new Person("Ivan", "Volchanskyi", 78, "blue");
     document.getElementById("demo15").innerHTML =
         "My father is " + myFather.age + ". My grand father is " + myGrandFather.age;
 }
