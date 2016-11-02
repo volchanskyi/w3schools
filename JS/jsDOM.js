@@ -16,3 +16,30 @@ function myDOM2() {
     document.getElementById("demo16").innerHTML = 
         "The first paragraph inside 'demo' is : " + y[0].innerHTML;
 }
+
+function myDOM3() {
+    var x = document.getElementsByClassName("demo17");
+    document.getElementById("demo16").innerHTML = 
+        "The first paragraph (index 0) with class='demo17': "  + x[0].innerHTML;
+}
+
+//Finding HTML Elements by CSS Selectors
+function myDOM4() {
+    var x = document.querySelectorAll("p.demo17");
+    document.getElementById("demo16").innerHTML =
+        "The first paragraph(index 0) with class='demo17': " + x[0].innerHTML;
+}
+
+//Finding HTML Elements by HTML Object Collections
+
+function myDOM5() {
+    // function myFunction() {
+        var x = document.forms["frm1"];
+        var text = "";
+        var i;
+        for (i = 0; i<x.length; i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo18").innerHTML = text;
+    // }
+}
