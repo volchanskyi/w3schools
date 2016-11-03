@@ -43,3 +43,9 @@ function myDOM5() {
         document.getElementById("demo18").innerHTML = text;
     // }
 }
+
+function myCSSDOM() {
+    document.getElementById("demo18").style.color = "blue";
+    document.getElementById("demo18").style.fontFamily = "Arial";
+    document.getElementById("demo18").style.fontSize = "larger";
+}
