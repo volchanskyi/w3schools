@@ -14,3 +14,19 @@ function checkCoockies() {
         }
         document.getElementById("demo19").innerHTML = text;
     }
+
+function myOnChange() {
+    var x = document.getElementById("fn");
+    x.value = x.value.toUpperCase();
+}
+
+function mOver(obj) {
+obj.innerHTML = "Thank you";
+}
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse over me";
+}
+
+
+
