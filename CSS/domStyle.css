@@ -17,3 +17,10 @@
     height:20px;
     padding:40px;
 }
+
+#myDIV {
+    background-color: coral;
+    border: 1px solid;
+    padding: 50px;
+    color: white;
+}
