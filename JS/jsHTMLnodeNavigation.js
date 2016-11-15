@@ -53,7 +53,30 @@ function myReplaceNode() {
 
 
 
+//nodeList
 
+function myNodeList() {
+    var myNodeL = document.getElementsByTagName("p");
+    document.getElementById("demo24").innerHTML =
+        "The innerHTML of the second paragraph is: " +
+            myNodeL[1].innerHTML;
+}
+
+
+//Node List length 
+function myNodeListLength() {
+    var myNodeL = document.getElementsByTagName("p");
+    console.log(myNodeL);
+    document.getElementById("demo24").innerHTML = myNodeL.length;
+}
+
+function myNodeL2() {
+    var myNodeList = document.getElementsByTagName("p");
+    var i;
+    for (i = 0; i < myNodeList.length; i++) {
+        myNodeList[i].style.backgroundColor = "red";
+    }
+}
 
 
 
