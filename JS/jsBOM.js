@@ -40,3 +40,39 @@ function myBOMScrPixDepth() {
     document.getElementById("demo26").innerHTML =
         "Screen Pixel Depth: " + screen.pixelDepth;
 }
+
+
+//The window.location.href property returns the URL of the current page.
+
+function myBOMLocation() {
+    document.getElementById("demo26").innerHTML = 
+        "Page location is: " + window.location.href;
+}
+
+//The window.location.hostname property returns the name of the internet host (of the current page).
+
+function myBOMLocationHost() {
+    document.getElementById("demo26").innerHTML = 
+        "Page hostname is: " + window.location.hostname;
+}
+
+
+//The window.location.pathname property returns the pathname of the current page.
+
+function myBOMLocationPath() {
+    document.getElementById("demo26").innerHTML = 
+        "Page pathname is: " + window.location.pathname;    
+}
+
+//The window.location.protocol property returns the web protocol of the page.
+
+function myBOMLocationProtocol() {
+    document.getElementById("demo26").innerHTML = 
+        "Page protocol is: " + window.location.protocol;
+}
+
+//The window.location.assign() method loads a new document.
+
+function myBOMLocationAssign() {
+    window.location.assign("http://www.w3schools.com")
+}
