@@ -144,3 +144,34 @@ function myJavaCheck() {
     document.getElementById("demo27").innerHTML = 
         "Enabled Java is " + navigator.javaEnabled();
 }
+
+//Alert Box
+
+function myAlertBox() {
+    alert("I am\n an alert box");
+}
+
+
+//Confirm Box
+
+function myConfirmBox() {
+    var x;
+    if (confirm("Press a button!") === true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+    document.getElementById("demo28").innerHTML = x;
+}
+
+
+//Prompt Box
+
+function myPromtBox() {
+    var person = prompt("Please enter your name", "Harry Potter");
+    
+    if (person != null) {
+        document.getElementById("demo28").innerHTML = 
+            "Hello " + person + "! How are you today?";
+    }
+}
