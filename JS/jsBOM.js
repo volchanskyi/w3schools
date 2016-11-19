@@ -76,3 +76,71 @@ function myBOMLocationProtocol() {
 function myBOMLocationAssign() {
     window.location.assign("http://www.w3schools.com")
 }
+
+// Window History Back
+// The history.back() method loads the previous URL in the history list.
+
+function myHistoryBack() {
+    window.history.back()
+}
+
+//History Forward
+
+function myHistoryForward() {
+    window.history.forward()
+}
+
+
+//The window.navigator object contains information about the visitor's browser.
+//The cookieEnabled property returns true if cookies are enabled, otherwise false:
+function myNavigatorCoockie() {
+    document.getElementById("demo27").innerHTML = 
+        "navigator.coockieEnabled is " + navigator.cookieEnabled;
+}
+
+//Browser Application Name
+
+//The appName property returns the application name of the browser:
+
+function myAppName() {
+    document.getElementById("demo27").innerHTML = 
+        "navigator.appName is " + navigator.appName;
+}
+
+
+function myAppCodeName() {
+    document.getElementById("demo27").innerHTML = 
+        "navigator.appCodeName is " + navigator.appCodeName;
+}
+
+//
+// The Browser Engine
+//
+// The product property returns the product name of the browser engine:
+
+function myNavProductName() {
+    document.getElementById("demo27").innerHTML = 
+        "navigator.product is " + navigator.product;
+}
+
+function myBrowserVer() {
+    document.getElementById("demo27").innerHTML = 
+        "Browser version is " + navigator.appVersion;
+}
+
+function myUserAgent() {
+    document.getElementById("demo27").innerHTML =
+        "user agent is " + navigator.userAgent;
+}
+
+function myBroPlatfLangStatus() {
+    document.getElementById("demo27").innerHTML =
+        "Operation System is  " + navigator.platform + " and the language is " + navigator.language + 
+            " online status is " + navigator.onLine;
+}
+
+
+function myJavaCheck() {
+    document.getElementById("demo27").innerHTML = 
+        "Enabled Java is " + navigator.javaEnabled();
+}
