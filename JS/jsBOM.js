@@ -175,3 +175,53 @@ function myPromtBox() {
             "Hello " + person + "! How are you today?";
     }
 }
+
+
+function mySetTimeout() {
+    alert("Hello");
+}
+
+function myStopEverything() {
+    clearInterval(o);
+    clearInterval(k)
+
+}
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo29").innerHTML = d.toLocaleTimeString();
+}
+
+function mySetCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function myGetCookie(cname) {
+     var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substr(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
+function myCheckCookie() {
+    var user = myGetCookie("username");
+    if (user !="") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter enter your name:","");
+        if (user != "" && user !== null) {
+            mySetCookie("username", user, 30);
+        }
+    }
+}
