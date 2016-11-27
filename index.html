@@ -307,9 +307,22 @@
 <button onclick="myCheckCookie()">checkCookie Method</button>
 
 
+<!--Ajax-->
+<p></p>
+<div id="demo31">
+    <h1>The XMLHttpRequest Object</h1>
+    <button type="button" onclick="loadDoc()">Change Content</button>
+    <button type="button" onclick="myLoadDoc2()">Change content2</button>
+    <button type="button" onclick="myLoadDoc3()">Request data (POST)</button>
+    <button type="button" onclick="myLoadDoc4('ajax_info.txt', myCallBackFunc)">Change Content (Call Back)</button>
+    <button type="button" onclick="myXmlResponse()">Try to parse an XML Response</button>
+</div>
+
+
 <!--include scripts-->
 
-<link type="text/css" rel="stylesheet" href="CSS/domStyle.css"/>
+<link type="text/css" rel="stylesheet" href="CSS/myStyle.css"/>
+<script src = "JS/jsAjax.js"></script>
 <script src = "JS/jsBOM.js" ASYNC></script>
 <script src = "JS/jsHTMLnodeNavigation.js" DEFER></script>
 <script src = "JS/jsDomEvents.js" async></script>
