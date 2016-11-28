@@ -124,7 +124,49 @@ function myFetchFunc(xml) {
 
 
 
+//Display the First CD in an HTML div Element
 
+function displayCD(i) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if ( this.readyState == 4 && this.status == 200) {
+            myGrabFunc(this, i);
+        }
+    };
+    xmlHttp.open("GET", "cd_catalog.xml", true);
+    xmlHttp.send();
+}
+
+function myGrabFunc(xml, i) {
+    var xmlDoc = xml.responseXML;
+    x = xmlDoc.getElementsByTagName("CD");
+    document.getElementById("showCD").innerHTML =
+        "Artist: " +
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "<br>Title: " +
+        x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "<br>YEAR: " +
+        x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+}
+
+// display the next CD, unless you are on the last CD
+var l = 0;
+function myNextCD() {
+
+    if (l < x.length-1) {
+        l++;
+        displayCD(l);
+    }
+}
+
+// display the previous CD, unless you are on the first CD 
+
+function myPreviousCD() {
+    if (l > 0) {
+        l--;
+        displayCD(l);
+    }
+}
 
 
 
