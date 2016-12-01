@@ -32,3 +32,19 @@ function myTimeCheck() {
     }
     document.getElementById("demo9").innerHTML = greeting;
 }
+
+function myJsDateBorn() {
+    var year = prompt("When the Ecma Script 5.1 was created?", " ");
+    var cond = (year != 2011);
+    if (cond) {
+        alert("WRONG!");
+    } else {
+        alert("RIGHT!");
+    }
+}
+
+function myShortComparison() {
+    var age = prompt("How old are you?", "");
+    var access = age > 14;
+    alert(access);
+}
