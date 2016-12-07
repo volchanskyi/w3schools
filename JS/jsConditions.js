@@ -48,3 +48,34 @@ function myShortComparison() {
     var access = age > 14;
     alert(access);
 }
+
+
+function myShortCond() {
+    var myAge = prompt("What`s your myAge?", 18);
+    var myCond = (myAge < 18) ? "Hello you`re little!" :
+        (myAge > 18) ? "What`s up man?" :
+            (myAge > 100) ? "No freaking way  you are so old!" :
+                "What a weird myAge...";
+    alert(myCond);
+}
+
+function myLognCheck() {
+    var askLogin = prompt("Put username. the username is case sensitive", "");
+    // var admin = askLogin.toLowerCase();
+
+
+    if (askLogin === "admin") {
+        var pass = prompt("Password?", "");
+        if (pass === "1234") {
+            alert("Welcome!");
+        } else if (pass === null) {
+            alert("You have to put password");
+        } else {
+            alert("The password is wrong");
+        }
+    } else if (askLogin === null) {
+        alert("Please enter username");
+    } else {
+        alert("The username is not recognized");
+    }
+}
