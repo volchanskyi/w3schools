@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 10/5/2016.
  */
+"use strict";
 function myCondition() {
     var age, voteable;
     age = document.getElementById("age").value;
@@ -78,4 +79,16 @@ function myLognCheck() {
     } else {
         alert("The username is not recognized");
     }
+}
+
+function myOfficeHoursCheck() {
+    var hour = 12, isWeekend = true;
+    if (hour < 10 || hour > 18 || isWeekend) {
+        alert("Office working hours from 10 to 18");
+    }
+}
+function myOrExamp() {
+    var undef, zero = 0, emptyStr = "", msg = "Hi!";
+    var result = undef || zero || emptyStr || msg || 0;
+    alert(result);
 }
