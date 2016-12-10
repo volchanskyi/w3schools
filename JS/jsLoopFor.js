@@ -49,3 +49,35 @@ function myLabelLoop() {
     }
     document.getElementById("demo10").innerHTML = text;
 }
+"use strict";
+
+function mySmartCond() {
+    while (true) {
+        var sum = 0;
+        var value = +prompt("Enter a number", " ");
+        if (!value)break;
+        sum += value;
+        alert("You put a number" + sum);
+    } 
+    
+    alert("You didn`t put a number");
+}
+
+function myContinueLoop() {
+    for (var i = 0; i < 10; i++) {
+        if (i % 2 === 0) continue;
+        alert(i);
+    }
+}
+
+
+//Loop that takes coordinates
+function myTagLoop() {
+    outer: for (var i = 0; i < 3; i++) {
+        for (var j = 0; j < 3; j++) {
+            var input = prompt("value in coordinates " +i+","+j, "");
+            if (!input) break outer;
+        }
+    }
+    alert("Done!");
+}

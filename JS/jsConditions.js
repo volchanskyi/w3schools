@@ -92,3 +92,4 @@ function myOrExamp() {
     var result = undef || zero || emptyStr || msg || 0;
     alert(result);
 }
+
