@@ -75,3 +75,55 @@ function myFunc5() {
 function myFunc6() {
     document.getElementById("demo16").innerHTML = add();
 }
+
+
+//start of the function
+function myAsk(question, yes, no) {
+
+    if(confirm(question)) yes()
+    else no();
+
+}
+
+function showOk() {
+    alert("You agreed");
+}
+
+function showCancel() {
+    alert("You declined");
+}
+
+
+function askQuestion () {
+    myAsk("Do you agree?", showOk, showCancel);
+}
+//end of the function
+
+//same function but less code
+function myAsk2(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+}
+
+function askQuestion2() {
+    myAsk2(
+        "Do you agree?",
+        function() { alert("You agreed."); },
+        function() { alert("You declined."); }
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
