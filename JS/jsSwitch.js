@@ -54,3 +54,28 @@ function myCheckFruit() {
     } 
     document.getElementById("demo9").innerHTML = text;
 }
+
+//Grouped case
+"use strict";
+function myGroupedSwitch() {
+    var input = document.getElementById("switch").value;
+    console.log(typeof input)
+    
+    input = Number(input);
+
+    // console.log(typeof input);
+    
+    switch (input) {
+        case 4:
+            alert("Right!");
+            break;
+        case 3:
+        case 5:
+            alert("Wrong");
+            alert("Not correct, happens");
+            break;
+
+        default:
+            alert("Weird result...");
+    }
+}
