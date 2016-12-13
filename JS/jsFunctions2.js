@@ -77,7 +77,7 @@ function myFunc6() {
 }
 
 
-//start of the function
+//start of the anonymous function
 function myAsk(question, yes, no) {
 
     if(confirm(question)) yes()
@@ -92,7 +92,6 @@ function showOk() {
 function showCancel() {
     alert("You declined");
 }
-
 
 function askQuestion () {
     myAsk("Do you agree?", showOk, showCancel);
@@ -112,6 +111,9 @@ function askQuestion2() {
         function() { alert("You declined."); }
     );
 }
+
+
+
 
 
 
