@@ -123,7 +123,37 @@ function askQuestion2() {
 }
 
 
+//search function
 
+function findString() {
+    var str = "Ivan got a new experience!";
+    alert(str);
+    var target = prompt("find a string from the previous alert", "");
+
+    if ( ~str.indexOf(target) ) {
+        alert(target + " founded in the alert");
+    } else if (target === null) {
+        alert("You have to put a string")
+    } else {
+        alert(str + " doesn`t contain string " + target);
+    }
+    
+}
+
+//Truncate function 
+
+function truncateStr() {
+    var str = prompt("put a string no longer then 5 symbols", "");
+    
+    if (str === null) {
+        alert("Please put something");
+    } 
+    else if (str.length > 5) {
+        alert( "you put " + str.slice(0, 5) + "..." );
+    } else {
+        alert("You put " + str);
+    }
+}
 
 
 
