@@ -81,3 +81,21 @@ function myTagLoop() {
     }
     alert("Done!");
 }
+
+
+//Loop through object
+
+function loopCountryCodes() {
+    var codes = {
+        "+7": "Russia",
+        "+38": "Ukraine",
+        "+1": "USA"
+    };
+
+    for (var code in codes) {
+        var value = codes[code];
+        code = +code;
+
+        alert( code + ": " + value);
+    }
+}
