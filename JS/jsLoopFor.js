@@ -99,3 +99,66 @@ function loopCountryCodes() {
         alert( code + ": " + value);
     }
 }
+
+
+//Check if the obj is empty
+
+
+function isEmpty(obj) {
+    for (var key in obj) {
+        return false;
+    }
+    return true;
+}
+
+function setAlarm() {
+    var schedule = {};
+    var wakeUp = prompt("What is wake up time?", "");
+    var goToBed = prompt("What is go to bed time?", "");
+
+    // if (wakeUp && goToBed === null || undefined) {
+    //     alert("Please enter wake up and go to bed time");
+    // }
+    //
+
+    alert( isEmpty(schedule) ); //true
+
+    schedule["wakeUp"] = wakeUp;
+    schedule["goToBed"] = goToBed;
+
+    alert( isEmpty(schedule) ); //false
+
+}
+
+//Sum properties
+"use strict";
+
+function checkSalaris(obj) {
+    var sum = 0;
+    
+    for (var key in obj) {
+        sum += obj[key];
+    }
+    return sum;
+}
+
+
+function getSalaries() {
+    var salaries = {};
+    var accSalary = prompt("Account salary?", "");
+    var itSalary = prompt("IT Dept. salary?", "");
+    var execSalary = prompt("Executives salary?", "");
+    
+    alert( checkSalaris(salaries) );
+
+    salaries["accountSalary"] = +accSalary;
+    salaries["itDeptSalary"] = +itSalary;
+    salaries["executivesSalary"] = +execSalary;
+
+    alert( checkSalaris(salaries) );
+}
+
+
+
+
+
