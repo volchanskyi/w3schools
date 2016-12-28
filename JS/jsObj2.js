@@ -46,5 +46,127 @@ function myDelPersObj() {
     document.getElementById("demo15").innerHTML = person.fname + " is " + person.age + " years old";
 }
 
+// find the last element
+
+function getLastItem() {
+    var goods = ["blue cheese", "apple", "popcorn"];
+    
+    alert( "last item is: " + goods[goods.length - 1] );
+    
+    var add = prompt("Would you like to add a new element to the massive", "");
+
+    if (add !== null || add !== undefined) {
+    goods.push(add);
+        alert("The new last item is: " + goods[goods.length - 1] );
+    } else {
+        alert("The last item is still: " + goods[goods.length - 1] );
+    }
+
+}
+
+//play with massive
+
+function addItems() {
+    var styles = ["Jazz", "Blues"];
+    styles.push("R`n`R");
+    styles[styles.length - 2] = "Classic";
+    alert( styles.shift() );
+    styles.unshift("Rap", "Raggy");
+    
+}
+
+//get random item
+
+function getRandomItem() {
+    var arr = ["Apple", "Banana", "Lemon", "Melon"];
+    var rand = Math.floor(Math.random() * arr.length);
+    
+    alert(arr[rand]);
+    
+}
+
+//calculator :)
+
+function runCalc() {
+    var numbers = [];
+
+    while(true) {
+        var value = prompt("Enter number", 0);
+        
+        if (value === "" || value === null || isNaN(value)) break;
+        
+        numbers.push(+value);
+    }
+    
+    var sum = 0;
+    
+    for (var i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    
+    alert(sum);
+}
+
+//find item in massive
+function findHero(array, value) {
+    if (array.indexOf) { // if the method exists
+        return array.indexOf(value);
+    }
+    //else
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === value) return i;
+    }
+
+    return -1;
+}
+
+function addHeroes() {
+    var arr = ["Bond", "Batman", "Yeti"];
+    var who = prompt("Please enter" + arr, "Bond");
+
+    findHero(arr, who);
+}
+
+
+//filter array
+
+function filterRange(arr, a, b) {
+    var result = [];
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= a && arr[i] <= b) {
+            result.push(arr[i]);
+        }
+    }
+
+    return result;
+}
+
+function initArray() {
+    var arr = [];
+    
+    for (var i = 0; arr.length < 5; i++) {
+        var num = prompt("Please put five numbers", "");
+
+        if (num === null || num === "" || isNaN(num)) {
+            alert("Please enter a number");
+            num += 0;
+        } else {
+
+            arr.push(+num);
+
+        }
+    }
+
+    var filtered = filterRange(arr, 3, 5);
+    
+    alert( "We found the next numbers in the array: " + filtered );
+    
+}
+
+
+
+
+
 
 

@@ -13,7 +13,7 @@ var buddy = {
     fullName: function () {
         return this.firstName + " " + this.lastName;
     }
-}
+};
 
 var fullName = buddy.fullName();
 
