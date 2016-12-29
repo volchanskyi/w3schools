@@ -92,9 +92,9 @@ function runCalc() {
 
     while(true) {
         var value = prompt("Enter number", 0);
-        
+
         if (value === "" || value === null || isNaN(value)) break;
-        
+
         numbers.push(+value);
     }
     
@@ -122,7 +122,7 @@ function findHero(array, value) {
 
 function addHeroes() {
     var arr = ["Bond", "Batman", "Yeti"];
-    var who = prompt("Please enter" + arr, "Bond");
+    var who = prompt("Please enter: " + arr.join(", "), "Bond");
 
     findHero(arr, who);
 }
@@ -163,6 +163,38 @@ function initArray() {
     alert( "We found the next numbers in the array: " + filtered );
     
 }
+
+
+// sort elements
+
+function sortNumAlgorithm(a, b) {
+    if (a > b) return 1;
+    if (a < b) return -1;
+}
+
+function sortNumData() {
+    var numbers = [];
+    alert("We`ll ask you FIVE times to enter a number");
+
+    for (var i = 0; numbers.length < 5; i++) {
+        var num = prompt("Please put a number", "");
+
+        if (num === null || num === "" || isNaN(num) || isNaN(parseInt(num)) || num === "0") {
+            alert("Please enter a number. Avoid letters, empty spaces and do not click on cancel");
+            // num += 0;
+            var numbers = new Array(0);
+        } else {
+
+            numbers.push(+num);
+
+        }
+    }
+
+    numbers.sort(sortNumAlgorithm);
+
+    alert("We sort your numbers: " + numbers);
+}
+
 
 
 
