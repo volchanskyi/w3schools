@@ -182,7 +182,7 @@ function sortNumData() {
         if (num === null || num === "" || isNaN(num) || isNaN(parseInt(num)) || num === "0") {
             alert("Please enter a number. Avoid letters, empty spaces and do not click on cancel");
             // num += 0;
-            var numbers = new Array(0);
+            numbers = new Array(0);
         } else {
 
             numbers.push(+num);
@@ -193,6 +193,76 @@ function sortNumData() {
     numbers.sort(sortNumAlgorithm);
 
     alert("We sort your numbers: " + numbers);
+}
+
+
+//using .splice method
+
+function showSplice() {
+    var sentance = ( document.getElementById("trySplice").innerHTML = "That bike is too fast" );
+    var arr = sentance.split(" ");
+    var ask = prompt("What do you want with the sentance? \n'delete' first few words \n'insert' some words \n'replace' first words", "delete");
+
+    if (ask === "delete") {
+        delSplice(arr);
+        document.getElementById("trySplice").innerHTML = arr.join(" ");
+    } else if (ask === "insert") {
+        insertSplice(arr);
+        document.getElementById("trySplice").innerHTML = arr.join(" ");
+    } else if (ask === "replace") {
+        replaceSplice(arr);
+        document.getElementById("trySplice").innerHTML = arr.join(" ");
+    } else if ( ask === null || ask === "") {
+        alert("You canceled or didn`t put a value");
+    } else {
+        alert("Can`t recognize the value: " + ask + "Try again");
+    }
+}
+
+
+
+
+function delSplice(param) {
+    var conf = confirm("Are you sure you want to delete first two words?");
+
+    if (conf === true) {
+        param.splice(0, 2);
+        return param;
+    } else {
+        alert("You Canceled");
+    }
+
+
+}
+
+
+function insertSplice(param) {
+    var conf = confirm("Are you sure you want to insert some words?");
+
+    if (conf === true) {
+        var fWord = prompt("Please put first word", "");
+        var sWord = prompt("Please put second word", "");
+
+        param.splice(0, 0, fWord, sWord);
+        return param;
+    } else {
+        alert("You Canceled");
+    }
+}
+
+function replaceSplice(param) {
+    var conf = confirm("Are you sure you want to insert some words?");
+
+    if (conf === true) {
+        var fWord = prompt("Please put first word", "");
+        var sWord = prompt("Please put second word", "");
+
+        param.splice(0, 2, fWord, sWord);
+        return param;
+    } else {
+        alert("You Canceled");
+    }
+    
 }
 
 
