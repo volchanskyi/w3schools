@@ -266,6 +266,40 @@ function replaceSplice(param) {
 }
 
 
+//camelize any dashed word
+
+function camelize(str) {
+    var arr = str.split('-');
+
+    for (var i = 1; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+
+    return arr.join('');
+
+}
+
+
+function getDashWord() {
+    var ask = prompt("Put a word that contains a dash ", "list-style-image");
+
+
+    if ( Number(ask[0]) === true || Number(ask.length -1) === true) {
+        alert("Numbers can`t be capitalized!");
+    } else if ( ask === null || ask === "" ) {
+        alert("You canceled or didn`t put a value");
+    } else if (ask.indexOf("-") !== -1) {
+        alert( camelize(ask) );
+        } else {
+            alert("Can`t recognize the value: " + ask + "Try again, and don`t forget to use a hyphen");
+    }
+}
+
+
+
+
+
+
 
 
 
