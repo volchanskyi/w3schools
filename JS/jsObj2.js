@@ -297,6 +297,25 @@ function getDashWord() {
     }
 }
 
+// random sort
+
+function useSortAlg(a, b) {
+    return Math.random() - 0.5;
+}
+
+
+function sortThat() {
+    var arr = [];
+
+    for (var i = 0; arr.length < 5; i++) {
+        arr[i] = prompt("Put some elements and we sort them randomly", "bla bla");
+    }
+
+    arr.sort(useSortAlg);
+
+    alert(arr);
+}
+
 
 
 
