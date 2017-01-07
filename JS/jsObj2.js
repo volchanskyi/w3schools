@@ -202,23 +202,23 @@ function showSplice() {
     var sentance = ( document.getElementById("trySplice").innerHTML = "That bike is too fast" );
     var arr = sentance.split(" ");
     var ask = prompt("What do you want with the sentance? \n'delete' first few words \n'insert' some words \n'replace' first words", "delete");
+    var htmlIns = document.getElementById("trySplice");
 
     if (ask === "delete") {
         delSplice(arr);
-        document.getElementById("trySplice").innerHTML = arr.join(" ");
+        htmlIns.innerHTML = arr.join(" ");
     } else if (ask === "insert") {
         insertSplice(arr);
-        document.getElementById("trySplice").innerHTML = arr.join(" ");
+        htmlIns.innerHTML = arr.join(" ");
     } else if (ask === "replace") {
         replaceSplice(arr);
-        document.getElementById("trySplice").innerHTML = arr.join(" ");
+        htmlIns.innerHTML = arr.join(" ");
     } else if ( ask === null || ask === "") {
         alert("You canceled or didn`t put a value");
     } else {
         alert("Can`t recognize the value: " + ask + "Try again");
     }
 }
-
 
 
 
@@ -265,6 +265,8 @@ function replaceSplice(param) {
     
 }
 
+//--------------------
+
 
 //camelize any dashed word
 
@@ -284,7 +286,7 @@ function getDashWord() {
     var ask = prompt("Put a word that contains a dash ", "list-style-image");
 
 
-    if ( Number(ask[0]) === true || Number(ask.length -1) === true) {
+    if ( isNaN( parseInt(ask) ) === false ) {
         alert("Numbers can`t be capitalized!");
     } else if ( ask === null || ask === "" ) {
         alert("You canceled or didn`t put a value");
