@@ -317,9 +317,63 @@ function sortThat() {
 }
 
 
+//MAP examples
+
+function getWords() {
+
+    var prmt = prompt("Please write a sentance and we count amount of letters in the words", "write something");
+
+    alert("You put " + prmt);
+    
+    alert( "The length of the words is " + mapArray(prmt) );
+    
+
+}
+
+function mapArray(str) {
+
+    str = str || "you canceled";
+
+    if (str === undefined) str = "wrong value";
+
+    var arr = str.split(" ");
+
+    var newArr = arr.map(function (item) {
+        return item.length;
+    });
+    
+    return newArr;
+}
+ 
+"use strict";
+//return sum of arguments
+
+function getArgs() {
+    
+    alert('Put three numbers and you`ll get the sum');
+    
+    var first = prompt("Put first number", "");
+    var second = prompt("Put second number", "");
+    var third = prompt("Put third number", "");
+
+    alert( sumArgs(+first, +second, +third) );
+}
 
 
 
+function sumArgs() {
+
+    //noinspection JSAnnotator
+    arguments = arguments || 0;
+    
+    var result = 0;
+
+    for (var i = 0; i < arguments.length; i++) {
+        result += arguments[i];
+    }
+    
+    return result;
+}
 
 
 
