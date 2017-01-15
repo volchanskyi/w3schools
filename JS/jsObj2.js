@@ -356,6 +356,11 @@ function getArgs() {
     var second = prompt("Put second number", "");
     var third = prompt("Put third number", "");
 
+    if ( isNaN( parseInt(first) ) === true || isNaN( parseInt(second) ) === true || isNaN( parseInt(third) ) === true) {
+        alert("The value is wrong. Please put numbers only");
+        return;
+    }
+
     alert( sumArgs(+first, +second, +third) );
 }
 
@@ -363,9 +368,6 @@ function getArgs() {
 
 function sumArgs() {
 
-    //noinspection JSAnnotator
-    arguments = arguments || 0;
-    
     var result = 0;
 
     for (var i = 0; i < arguments.length; i++) {
