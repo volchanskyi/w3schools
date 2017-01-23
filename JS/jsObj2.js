@@ -377,8 +377,68 @@ function sumArgs() {
     return result;
 }
 
+//counter with using an object
 
+function makeCounter() {
+    var currentCount = 1;
 
+    function counter() {
+        return currentCount++;
+    }
+
+        counter.set = function (value) {
+            currentCount = value;
+        };
+        
+        counter.reset = function () {
+            currentCount = 1;
+        };
+    return counter;
+
+}
+
+function callCounter() {
+    var counter = makeCounter();
+    
+    alert( counter() );
+    alert( counter() );
+    
+    counter.set(5);
+    alert( counter() );
+}
+
+//string buffer
+
+function makeBuffer() {
+
+    var currentBuffer = "";
+
+    function buffer(piece) {
+        if (arguments.length == 0) {
+            return currentBuffer;
+        }
+      currentBuffer += piece;
+    }
+
+    buffer.clear = function () {
+        currentBuffer = "";
+    };
+
+    return buffer;
+
+}
+
+function doBuffer() {
+    var buffer = makeBuffer();
+
+    buffer("Test");
+    buffer(" doesn`t eat itself");
+    alert( buffer() );
+
+    buffer.clear();
+
+    alert( buffer() );
+}
 
 
 
