@@ -441,5 +441,46 @@ function doBuffer() {
 }
 
 
+//sort names by fields
+function byField(field) {
+   return function (a, b) {
+       return a[field] > b[field] ? 1 : -1;
+   }
+}
+
+function sortName() {
+
+    // var name = document.getElementById("getObj").value;
+    // var surname = document.getElementById("getObj").value;
+    // var age = document.getElementById("getObj").value;
+
+    
+    var users = [{
+        name: document.getElementById('getObjName').value,
+        surname: document.getElementById("getObjSurname").value,
+        age: +document.getElementById("getObjAge").value
+    }, {
+        name: "Sam",
+        surname: 'Mendes',
+        age: 25
+    }, {
+        name: "Maria",
+        surname: 'Galvanize',
+        age: 18
+    }];
+
+
+    users.sort(byField("name"));
+    users.forEach(function(user) {
+        alert(user.name);
+    });
+
+    users.sort(byField("age"));
+    users.forEach(function(user) {
+        alert(user.age);
+    });
+
+}
+
 
 
