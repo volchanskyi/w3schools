@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Project</title>
+
+
+    <!--add Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--END-->
+<!--<div class=""-->
+
+</head>
+<body>
+<div class="container-fluid">
+
+    <h1>some text<small> some light text</small></h1>
+        <h2>an this is <mark>a mark example</mark></h2>
+            <h3>This is  <abbr title="organization of united nations">UN</abbr> </h3>
+    <p><blockquote>Quote example</blockquote></p>
+    <p class="blockquote-reverse">right quote</p>
+    <p></p>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+    <p></p><code>it`s a cool feature to use with code examples</code>
+    <p>and <kbd>that one</kbd> too!</p>
+    <p>just a <pre>space</pre></p>
+
+    <h2>Contextual Colors examples</h2>
+    <p>Use the contextual classes to provide "meaning through colors":</p>
+    <p class="text-muted">This text is muted.</p>
+    <p class="text-primary">This text is important.</p>
+    <p class="text-success">This text indicates success.</p>
+    <p class="text-inf">This text represents some information.</p>
+    <p class="text-warning">This text represents a warning.</p>
+    <p class="text-danger">This text represents danger.</p>
+
+    <h2>Contextual Backgrounds examples</h2>
+    <p>Use the contextual background classes to provide "meaning through colors":</p>
+    <p class="bg-primary">This text is important.</p>
+    <p class="bg-success">This text indicates success.</p>
+    <p class="bg-info">This text represents some information.</p>
+    <p class="bg-warning">This text represents a warning.</p>
+    <p class="bg-danger">This text represents danger.</p>
+
+
+<table class="table table-hover table-condensed table-responsive">
+    <thead>
+    <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>eMail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="success">
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr class="info">
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2 class="well">Responsive image example</h2>
+<img class="img-responsive img-thumbnail" src="images/newyork.jpg" alt="New York" width="40" height="30">
+    <img class="img-responsive img-circle" src="images/paris.jpg" alt="Paris" width="40" height="30">
+    <img class="img-responsive img-rounded" src="images/sanfran.jpg" alt="San Francisco" width="40" height="30">
+    <div class="page-header">
+        <h2>Image Gallery</h2>
+    </div>
+    <p>The .thumbnail class can be used to display an image gallery.</p>
+    <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
+    <p>Click on the images to enlarge them.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="images/sanfran.jpg" target="_blank">
+                    <img src="images/sanfran.jpg" alt="Romantic" style="width:100%">
+                    <div class="caption">
+                        <p>My new home. I fell in love with it right after my landing here.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="images/paris.jpg" target="_blank">
+                    <img src="images/paris.jpg" alt="Dream" style="width:100%">
+                    <div class="caption">
+                        <p>I have a little dream to go see Paris someday :)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="images/newyork.jpg" target="_blank">
+                    <img src="images/newyork.jpg" alt="The Capital of the World!" style="width:100%">
+                    <div class="caption">
+                        <p>At least once in your life you should see New York. The capital of the world is amazing.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Bootstrap Tutorial</h1>
+        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+            responsive, mobile-first projects on the web.</p>
+    </div>
+    <p></p>
+<h1>Alert Messages</h1>
+    <div class="alert alert-success alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+
+    <div class="alert alert-info alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+    </div>
+
+    <div class="alert alert-warning alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Warning!</strong> Indicates a warning that might need attention.
+    </div>
+
+    <div class="alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+
+    <h2>Buttons</h2>
+    <button type="button" class="btn btn-default btn-lg">Default</button>
+    <button type="button" class="btn btn-primary btn-md">Primary</button>
+    <button type="button" class="btn btn-success btn-sm">Success</button>
+    <button type="button" class="btn btn-info btn-xs">Info</button>
+    <button type="button" class="btn btn-warning active">Warning</button>
+    <button type="button" class="btn btn-danger disabled">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+</div>
+</body>
+</html>

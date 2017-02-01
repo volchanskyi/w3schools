@@ -107,6 +107,31 @@ function runCalc() {
     alert(sum);
 }
 
+//Alternative calculator
+'use strict';
+var  calculator = {
+    read: function () {
+        this.a = +prompt("Put first value", 0);
+        this.b = +prompt("Put second value", 0);
+    },
+
+    sum: function () {
+        return this.a + this.b;
+    },
+
+    mul: function () {
+        return this.a * this.b;
+    }
+};
+
+function callCalc() {
+    calculator.read();
+    alert( calculator.sum() );
+    alert( calculator.mul() );
+}
+ 
+
+
 //find item in massive
 function findHero(array, value) {
     if (array.indexOf) { // if the method exists
@@ -481,6 +506,55 @@ function sortName() {
     });
 
 }
+
+//Module style
+
+(function () {
+
+    // Global var
+    var message = "Hey!";
+
+    //func for calling the var
+    function showVar() {
+        alert(message);
+    }
+
+    //calling the message(function)
+    showVar();
+
+
+})();
+
+//Chaining method
+function callLadder() {
+    var ladder = {
+        step: 0,
+        up: function() {
+            this.step++;
+            return this;
+        },
+        down: function() {
+            this.step--;
+            return this;
+        },
+        showStep: function() {
+            alert( this.step );
+            return this;
+        }
+    };
+    
+ladder.up().up().down().up().down().showStep();
+
+}
+
+
+
+///
+// var s = elem.style;
+//
+// s.top = '10px';
+// s.left = '0';
+
 
 
 
