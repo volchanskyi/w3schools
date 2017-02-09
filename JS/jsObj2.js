@@ -547,14 +547,37 @@ ladder.up().up().down().up().down().showStep();
 
 }
 
+//Constructors (constructors use capital first letter)
+
+function User(firstName, lastName) {
+    var hi = "My name is ";
+    this.firstName = firstName;
+    this.lastName = lastName;
+
+    this.sayHi = function () {
+        alert( hi + this.firstName + " " + this.lastName);
+    };
+}
+
+function getName() {
+    var user = new User( document.getElementById("demo35").value, document.getElementById("demo36").value );
+    user.sayHi();
+}
 
 
-///
-// var s = elem.style;
+//Accumulator (constructor) calls automatically
+
+// function Accumulator(startingValue) {
+//     this.value = startingValue;
 //
-// s.top = '10px';
-// s.left = '0';
-
-
-
+//     this.read = function() {
+//         this.value += +prompt("How many?", "");
+//     };
+//
+// }
+//
+//     var accumulator = new Accumulator(1);
+//     accumulator.read();
+//     accumulator.read();
+//     alert( accumulator.value );
 

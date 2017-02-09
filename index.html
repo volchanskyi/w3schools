@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <!--inc jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 <h1> introduction</h1>
@@ -427,6 +428,19 @@
 </form>
 <p>call ladder method </p>
 <button type="button" onclick="callLadder()">call ladder method</button>
+<p></p>
+<form style="border: solid blue;">
+    <label for="demo35"><input type="text" value="" id="demo35" placeholder="put some first name here" required/></label>
+    Get a name:<br>
+    <label for="demo36"><input type="text" value="" id="demo36" placeholder="put last name here" required/></label>
+    Get a name:<br>
+    <button type="submit" onclick="getName()">Use constructor to Say Hi</button>
+</form>
+
+<!--<button type="submit" onclick="bla()">BLA</button>-->
+
+<h3 id="testJQ" style="color: red">Jquery Test</h3>
+
 
 
 <!--INCLUDE SCRIPTS-->
@@ -465,6 +479,7 @@
 <script src = "JS/jsFormsAPI.js"></script>
 <script src = "JS/jsFunctions2.js"></script>
 <script src="JS/jsAnimation.js"></script>
+<script src="jQuery/jq.js"></script>
 
 
 <!--INC TESTS-->
@@ -476,6 +491,7 @@
 <script src="tests/tSumArgs.js"></script>
 <script src="tests/tMakeBuffer.js"></script>
 <script src="tests/tCalc.js"></script>
+<script src="tests/tAccumulator.js"></script>
 <!--END OF TESTS-->
 
 </body>
