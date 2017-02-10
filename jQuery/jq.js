@@ -6,3 +6,20 @@ $(document).ready(function () {
     $(this).hide();
     });
 });
+
+
+
+$(document).ready(function () {
+    $("#button").click(function () {
+        $("#testJQ").hide();
+    });
+});
+
+
+
+$(document).ready(function () {
+    $(".button").click(function () {
+        $(".testJQ").hide();
+    });
+});
+

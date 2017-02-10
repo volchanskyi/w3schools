@@ -564,7 +564,6 @@ function getName() {
     user.sayHi();
 }
 
-
 //Accumulator (constructor) calls automatically
 
 // function Accumulator(startingValue) {
@@ -580,4 +579,170 @@ function getName() {
 //     accumulator.read();
 //     accumulator.read();
 //     alert( accumulator.value );
+
+function tryObj() {
+
+var user = {
+    lastName: "Volchanskyi"
+};
+
+Object.defineProperty(user, "name", {
+    value: "Ivan",
+    writable: false,
+    configurable: false
+});
+
+user.name = "John";
+    return user.name;
+}
+
+function tryObj2() {
+    var usr = {
+        firstName: "Ivan",
+        lastName: "Volchanskyi"
+    };
+    
+    Object.defineProperty(usr, "fullName", {
+        get: function () {
+            return this.firstName + " " + this.lastName;
+        },
+        
+        set: function (value) {
+            var split = value.split(' ');
+            this.firstName = split[0];
+            this.lastName = split[1];
+        }
+    });
+    
+    alert(usr.fullName);
+    
+    usr.fullName = "Sergey Udakov";
+    alert(usr.firstName);
+    alert(usr.lastName);
+
+}
+
+function tryObj3() {
+    var user = {
+        // firstName: "Nobody",
+        // lastName: "No one",
+    
+        get fullName() {
+            return this.firstName + " " + this.lastName;
+        },
+        
+        set fullName(value) {
+            var split = value.split(' ');
+            this.firstName = split[0];
+            this.lastName = split[1];
+        }
+    };
+    
+    alert(user.fullName);
+    
+    user.fullName = "Ivan Volchanskyi";
+    alert(user.firstName);
+    alert(user.lastName);
+}
+
+
+
+function Usr(name, birthday) {
+    this.name = name;
+        this.birthday = birthday;
+    
+    Object.defineProperty(this, "age", {
+        get: function () {
+            var todayYear = new Date().getFullYear();
+            return todayYear - this.birthday.getFullYear();
+        }
+    });
+}
+
+function tryObj4() {
+var pete = new Usr("Pete", new Date(1986, 11, 5));
+    
+    alert( pete.birthday);
+    alert( pete.age );
+}
+
+
+function tryNewObj() {
+    var user = {};
+    
+    Object.defineProperties(user, {
+        firstName: {
+            value: "Pete"
+        },
+        
+        lastName: {
+            value: "Peterson"
+        },
+        
+        fullName: {
+            get: function () {
+                return this.firstName + " " + this.lastName; 
+            }
+        }
+    });
+    alert( user.fullName );
+}
+
+
+function trySecObj() {
+    var obj = {
+        a: 1,
+        b: 2,
+        internal: 3
+    };
+    
+    Object.defineProperty(obj, "internal", {
+        enumerable: false
+    });
+    
+    alert( Object.keys(obj) );
+    alert( Object.getOwnPropertyNames(obj) );
+}
+
+
+function User2(fullName) {
+    this.fullName = fullName;
+
+    Object.defineProperties(this, {
+
+        firstName: {
+
+            get: function () {
+                return this.fullName.split(" ")[0];
+            },
+       
+        set: function (newFirstName) {
+            this.fullName =  newFirstName + " " + this.lastName;
+            }
+        },
+
+        lastName: {
+            get: function () {
+                return this.fullName.split(" ")[1];
+            },
+            
+            set: function (newLastName) {
+                this.fullName = this.firstName + " " + newLastName;
+            }
+        }
+
+    });
+
+}
+
+function tryExamp() {
+    var vasya = new User2("Vas Anchishkin");
+    console.log(vasya.fullName);
+    console.log(vasya.firstName);
+    console.log(vasya.lastName);
+    vasya.lastName = "Grigorov";
+    console.log(vasya.fullName);
+}
+
+
 
