@@ -744,5 +744,42 @@ function tryExamp() {
     console.log(vasya.fullName);
 }
 
+//comparing Magazines
 
+function Journal(date) {
+    this.date = date;
+
+    this.formatDate = function (date) {
+        return date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
+    };
+
+    this.getTitle = function () {
+        return "Published " + this.formatDate(this.date);
+    };
+}
+
+Journal.compare = function(journalA, journalB) {
+    return journalA.date - journalB.date;
+};
+
+function compareJournals() {
+    var journals = [
+      new Journal( new Date(document.getElementById("booksDate").value) ),
+      new Journal( new Date(document.getElementById("booksDate2").value) ),
+      new Journal( new Date(document.getElementById("booksDate3").value) )
+    ];
+
+    function findMin(journals) {
+        var min = 0;
+        for (var i = 0; i < journals.length; i++) {
+            if (Journal.compare(journals[min], journals[i]) > 0) min = i;
+        }
+        return journals[min];
+    }
+
+    alert( findMin(journals).getTitle() );
+}
+
+
+//fabric methods
 
