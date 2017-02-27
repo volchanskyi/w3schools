@@ -781,5 +781,31 @@ function compareJournals() {
 }
 
 
-//fabric methods
+//Objects counter
+
+function Article() {
+    this.created = new Date();
+
+    Article.count++;
+    Article.last = this.created;
+}
+
+Article.showStats = function () {
+    alert( "Total: " + this.count + ", last one: " + this.last );
+};
+
+// Article.count = 0;
+
+function objCount() {
+Article.count = 0;
+new Article();
+new Article();
+
+Article.showStats();
+
+
+new Article();
+
+Article.showStats();
+}
 
